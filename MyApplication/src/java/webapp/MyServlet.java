@@ -6,7 +6,7 @@
 package webapp;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+//import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,8 +33,8 @@ public class MyServlet extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=utf-8");
 
-        PrintWriter pw = resp.getWriter();
-        pw.println("<H1>Каталог!</H1>");
+        //PrintWriter pw = resp.getWriter();
+
 
         Connection c1 = null;
         Statement s1 = null;
@@ -42,7 +42,7 @@ public class MyServlet extends HttpServlet {
 
         try {
 
-            ArrayList<ObjectDetail> items = new ArrayList<ObjectDetail>();
+            ArrayList<ObjectDetail> items = new ArrayList<>();
 
             Class.forName("org.h2.Driver");
 
